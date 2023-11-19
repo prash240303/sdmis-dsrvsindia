@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [currentDateTime, setCurrentDateTime] = useState("");
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -11,8 +12,42 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
+  // Function to update date and time
+  const updateDateTime = () => {
+    const now = new Date();
+    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" };
+    const formattedDateTime = now.toLocaleString("en-US");
+    setCurrentDateTime(formattedDateTime);
+  };
+
+  // Update date and time on component mount
+  useEffect(() => {
+    updateDateTime();
+    // Update every second
+    const intervalId = setInterval(updateDateTime, 1000);
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
+
   return (
     <nav className="border-b-8 border-sdmis-primary-300 bg-sdmis-primary-100  flex flex-col items-center">
+
+      <div className=" bg-sdmis-primary-600 w-full flex items-center justify-between px-4">
+        <div className="flex items-start justify-center">
+          <Image src="/next.svg" alt="logo" width={128} height={77} className="w-12 h-8 " />
+          <Image src="/next.svg" alt="logo" width={128} height={77} className="w-12 h-8 " />
+
+        </div>
+        <Link href="/" className="text-white text-sm underline">
+          skip to main content
+        </Link>
+        <div>
+          <p className="text-white text-sm">{currentDateTime}</p>
+        </div>
+      </div>
+
+
       {/* Images displayed  in mobile view */}
       <div className="md:hidden flex   text-center">
         <Image src="/logo.png" alt="logo" width={128} height={77} className="w-20 h-20 mx-auto mb-4" />
@@ -84,7 +119,6 @@ const Navbar = () => {
 
       {/* Hamburger menu for mobile view */}
       <div className="md:hidden text-center mt-6 w-full bg-sdmis-primary-600 text-white">
-
         <button
           className="text-2xl focus:outline-none"
           onClick={toggleMenu}
@@ -131,9 +165,6 @@ const Navbar = () => {
         )}
       </div>
 
-
-
-
       <ul className="hidden md:flex text-sm bg-sdmis-primary-600 w-full justify-center  items-center text-center  text-white">
         <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2 py-5 ">
           <Link href="/">About us</Link>
@@ -167,7 +198,7 @@ const Navbar = () => {
         </li>
         <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/">Latest Updates</Link>
-        </li> 
+        </li>
         <li className="hover:bg-sdmis-primary-200  border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/">New Events</Link>
         </li>
