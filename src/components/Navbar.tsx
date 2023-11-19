@@ -30,6 +30,22 @@ const Navbar = () => {
   }, []);
 
 
+    // Dynamic navigation items
+    const navItems = [
+      { label: "About us", route: "/" },
+      { label: "Service on Portal", route: "/" },
+      { label: "Track Application", route: "/" },
+      { label: "Contact Us", route: "/" },
+      { label: "Donation", route: "/" },
+      { label: "Apply for New Branch / Study Centre", route: "/" },
+      { label: "Direct Online Admission", route: "/" },
+      { label: "Centre Locater", route: "/" },
+      { label: "Slider", route: "/" },
+      { label: "Latest Updates", route: "/" },
+      { label: "New Events", route: "/" },
+    ];
+
+
   return (
     <nav className="border-b-8 border-sdmis-primary-300 bg-sdmis-primary-100 w-full  flex flex-col items-center">
 
@@ -60,7 +76,7 @@ const Navbar = () => {
         <div className="hidden sm:block">
           <Image src="/images/logo.png" alt="logo" width={128} height={77} className="w-48 h-32" />
         </div>
-        <div className="flex flex-col gap-1 my-2  w-full font-bold md:text-2xl text-base px-3 text-left">
+        <div className="flex flex-col gap-1 my-2  w-full font-bold md:text-2xl lg:text-xl  text-base px-3 md:text-left text-center">
           <h1>डिजिटल शिक्षा तथा रोज़गार विकास संस्थान</h1>
           <h1>Institute of Digital Education & Employment Development, INDIA</h1>
           <h1 className="font-semibold md:text-xl text-sm w-full">AN ISO 9001:2015 CERTIFIED INSTITUTE</h1>
@@ -80,14 +96,14 @@ const Navbar = () => {
             Login / Sign Up
           </button>
           {showDropdown && (
-            <ul className="absolute left-0 bg-sdmis-primary-300">
-              <li className="hover:bg-sdmis-primary-400 cursor-pointer px-8 py-2">
+            <ul className="absolute left-0 bg-sdmis-primary-100 text-black ">
+              <li className="hover:bg-sdmis-primary-600 cursor-pointer px-8 py-2">
                 <Link href="/">Admin</Link>
               </li>
-              <li className="hover:bg-sdmis-primary-400 cursor-pointer text-center py-2">
+              <li className="hover:bg-sdmis-primary-600 cursor-pointer text-center py-2">
                 <Link href="/">Student</Link>
               </li>
-              <li className="hover:bg-sdmis-primary-400 cursor-pointer text-center py-2">
+              <li className="hover:bg-sdmis-primary-600 cursor-pointer text-center py-2">
                 <Link href="/">E-Mitra</Link>
               </li>
             </ul>
@@ -165,43 +181,12 @@ const Navbar = () => {
         )}
       </div>
 
-      <ul className="hidden md:flex text-sm bg-sdmis-primary-600 w-full justify-center  items-center text-center  text-white">
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2 py-4 ">
-          <Link href="/">About us</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2   py-4 ">
-          <Link href="/">Service on Portal</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400  cursor-pointer px-2  py-4 ">
-          <Link href="/">Service on Portal</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-4 ">
-          <Link href="/">Track Application</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer  px-2  py-4 ">
-          <Link href="/">Contact Us</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-4 ">
-          <Link href="/">Donation</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200  border-r border-sdmis-primary-400 cursor-pointer px-2  py-4 ">
-          <Link href="/">Apply for New Branch / Study Centre</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-4 ">
-          <Link href="/" >Direct Online Admission</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer  px-2  py-4 ">
-          <Link href="/">Centre Locater</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-4 ">
-          <Link href="/">Slider</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-4 ">
-          <Link href="/">Latest Updates</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-200  border-sdmis-primary-400 cursor-pointer px-2  py-4 ">
-          <Link href="/">New Events</Link>
-        </li>
+       <ul className="hidden md:flex  lg:leading-tight text-xs bg-sdmis-primary-600 w-full justify-center items-center text-center text-white">
+        {navItems.map((item, index) => (
+          <li key={index} className="hover:bg-sdmis-primary-100 md:text-sm lg:text-xs hover:text-black border-r border-sdmis-primary-400 cursor-pointer px-2 md:py-1 lg:py-4">
+            <Link href={item.route}>{item.label}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
