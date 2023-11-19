@@ -12,18 +12,18 @@ const Navbar = () => {
     setShowDropdown(!showDropdown);
   };
   return (
-    <nav className="border p-4 flex flex-col items-center">
+    <nav className="border-b-8 border-sdmis-primary-300 bg-sdmis-primary-100  flex flex-col items-center">
       {/* Images displayed  in mobile view */}
-      <div className="md:hidden flex  text-center">
-        <Image src="/logo.jpg" alt="logo" width={128} height={77} className="w-20 h-20 mx-auto mb-4" />
+      <div className="md:hidden flex   text-center">
+        <Image src="/logo.png" alt="logo" width={128} height={77} className="w-20 h-20 mx-auto mb-4" />
         <Image src="/logoside.jpg" alt="logo" width={150} height={100} className="mx-auto w-28 h-20" />
       </div>
 
 
-      <div className="flex gap-12 items-center justify-center w-full">
+      <div className="flex bg-sdmis-primary-100 gap-12 items-center justify-center w-full">
         {/* Images hidden in laptop view */}
         <div className="hidden sm:block">
-          <Image src="/logo.jpg" alt="logo" width={128} height={77} className="w-48 h-32" />
+          <Image src="/logo.png" alt="logo" width={128} height={77} className="w-48 h-32" />
         </div>
         <div className="flex flex-col gap-1 w-full font-bold md:text-2xl text-base px-3 text-center">
           <h1>डिजिटल शिक्षा तथा रोज़गार विकास संस्थान</h1>
@@ -37,28 +37,27 @@ const Navbar = () => {
 
 
         {/* Custom dropdown for Login/Sign Up (hidden for mobile view) */}
-      <div className="hidden md:block relative text-white w-64">
-        <button
-          className="text-white bg-sdmis-primary-600 p-3"
-          onClick={toggleDropdown}
-        >
-          Login / Sign Up
-        </button>
-        {showDropdown && (
-          <ul className="absolute left-0 bg-sdmis-primary-300">
-            <li className="hover:bg-sdmis-primary-400 cursor-pointer px-8 py-2">
-              <Link href="/">Admin</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-400 cursor-pointer text-center py-2">
-              <Link href="/">Student</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-400 cursor-pointer text-center py-2">
-              <Link href="/">E-Mitra</Link>
-            </li>
-          </ul>
-        )}
-      </div>
-
+        <div className="hidden md:block relative text-white w-64">
+          <button
+            className="text-white bg-sdmis-primary-600 p-3"
+            onClick={toggleDropdown}
+          >
+            Login / Sign Up
+          </button>
+          {showDropdown && (
+            <ul className="absolute left-0 bg-sdmis-primary-300">
+              <li className="hover:bg-sdmis-primary-400 cursor-pointer px-8 py-2">
+                <Link href="/">Admin</Link>
+              </li>
+              <li className="hover:bg-sdmis-primary-400 cursor-pointer text-center py-2">
+                <Link href="/">Student</Link>
+              </li>
+              <li className="hover:bg-sdmis-primary-400 cursor-pointer text-center py-2">
+                <Link href="/">E-Mitra</Link>
+              </li>
+            </ul>
+          )}
+        </div>
       </div>
 
       {/* mobile view signup button */}
@@ -135,41 +134,41 @@ const Navbar = () => {
 
 
 
-      <ul className="hidden md:flex text-base bg-sdmis-primary-600  items-center text-center text-white">
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer px-2 py-5">
+      <ul className="hidden md:flex text-sm bg-sdmis-primary-600 w-full justify-center  items-center text-center  text-white">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2 py-5 ">
           <Link href="/">About us</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer py-5">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2   py-5 ">
           <Link href="/">Service on Portal</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400  cursor-pointer py-5">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400  cursor-pointer px-2  py-5 ">
           <Link href="/">Service on Portal</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer py-5">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/">Track Application</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer py-5 px-2">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer  px-2  py-5 ">
           <Link href="/">Contact Us</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer py-8 px-2">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/">Donation</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300  border-r border-sdmis-primary-400 cursor-pointer py-5">
+        <li className="hover:bg-sdmis-primary-200  border-r border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/">Apply for New Branch / Study Centre</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer py-5">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/" >Direct Online Admission</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer py-5">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer  px-2  py-5 ">
           <Link href="/">Centre Locater</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer px-2 py-8">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/">Slider</Link>
         </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer py-5">
+        <li className="hover:bg-sdmis-primary-200 border-r border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/">Latest Updates</Link>
-        </li>
-        <li className="hover:bg-sdmis-primary-300 border-r border-sdmis-primary-400 cursor-pointer py-5">
+        </li> 
+        <li className="hover:bg-sdmis-primary-200  border-sdmis-primary-400 cursor-pointer px-2  py-5 ">
           <Link href="/">New Events</Link>
         </li>
       </ul>
