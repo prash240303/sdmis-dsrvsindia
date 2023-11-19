@@ -18,12 +18,9 @@ const config: Config = {
         'white-15': 'rgba(255, 255, 255, 0.15)',
         sdmis: {
           primary: {
-            100: '#81b4d0',
-            200: '#68a5c6',
-            300: '#4f96bd',
-            400: '#3587b3',
-            500: '#1c78aa',
-            600: '#0369A0',
+            100: '#F8EDDB',
+            300: '#F8EDDB',
+            600: '#AD4800',
           },
           neutral: {
             0: '#ffffff',
