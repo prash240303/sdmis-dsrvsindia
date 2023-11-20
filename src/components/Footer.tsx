@@ -1,45 +1,67 @@
-import React from 'react';
-import Image from 'next/image';
+import Image from "next/image";
+import { FaInstagram, FaFacebook, FaYoutube, FaTwitter } from "react-icons/fa";
+export default function Footer() {
+  const footerItems = [
+    "About Us",
+    "Contact Us",
+    "Terms & Conditions",
+    "Privacy Policy",
+    "Help",
+    "FAQs",
+    "Feedback",
+    "Sitemap",
+  ];
 
-const Footer = () => {
   return (
-    <footer className="bg-sdmis-primary-600 w-full text-white py-4">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center">
-          <Image src="/images/logo.png" alt="logo" width={128} height={77} className="w-12 h-6" />
-          <Image src="/images/logoside.jpg" alt="logo" width={150} height={100} className="w-12 h-6 ml-4" />
+    <>
+      {/* Footer */}
+      <div className="w-full border bg-sdmis-primary-300 border-black ">
+        <div className="flex justify-center items-center flex-wrap gap-3 px-2 py-3 border-b border-sdmis-primary-600">
+          {/* dynamic list of items */}
+          |
+          {footerItems.map((item, index) => (
+            <a
+              key={index}
+              href="#"
+              className="text-sdmis-neutral-500 hover:text-sdmis-primary-600"
+            >
+              {item} |
+            </a>
+          ))}
         </div>
-        <div>
-          <p className="text-xs">© 2023 Your Website. All rights reserved.</p>
+        <div className="flex flex-col md:text-base text-sm   gap-2 text-center items-center justify-center mt-4">
+          <p>
+            Copyright © 2022. Punjab School Education Board, Vidya Bhawan,
+            Phase-8, SAS Nagar (Mohali), India. All rights reserved.
+          </p>
+          <p>
+            For any query regarding this website Please Contact the
+            WIM:board.pseb@punjab.gov.in (Feedback through Email)
+          </p>
+          <div className="flex gap-6 mt-2">
+            <FaInstagram className="w-8 h-8" />
+            <FaTwitter className="w-8 h-8" />
+            <FaFacebook className="w-8 h-8" />
+            <FaYoutube className="w-8 h-8" />
+          </div>
+        </div>
+        <div className="flex bg-sdmis-primary-600 md:text-sm text-xs  flex-col text-white  items-center justify-center text-center  gap-4  mt-4 ">
+          <div className="flex md:flex-row flex-col md:gap-4 gap-2 mt-4">
+            <p>  Total Visitors: 1231157</p>
+            <p> Last Updated On : 2023-11-06 10:44:2</p>
+          </div>
+          <p>
+            This site is best viewed in 1024 * 768 resolution with latest
+            version of Chrome, Firefox, Safari and Internet Explorer(Edge).
+          </p>
         </div>
       </div>
-
-      <div className="container mx-auto mt-4 text-xs text-center">
-        <p>Home | Act | Services | Accessibility Statement | Website Policies | Terms & Conditions | Help | Disclaimer | Archive | Contact Us | Sitemap</p>
-        <p className="mt-2">Copyright © 2022. Punjab School Education Board, Vidya Bhawan, Phase-8, SAS Nagar (Mohali), India. All rights reserved.</p>
-        <p className="mt-2">For any query regarding this website Please Contact the WIM:board.pseb@punjab.gov.in (Feedback through Email)</p>
-      </div>
-
-      <div className="container mx-auto mt-4 text-xs text-center">
-        <p>Total Visitors: 1231047</p>
-        <p>Last Updated On: 2023-11-06 10:44:26</p>
-      </div>
-
-      <div className="container flex mx-auto mt-4 text-xs text-center">
-          <a href="/images/logo.png" target="_blank" title="HTML validator">
-            <Image width={50} height={50} alt="valid" data-entity-type="file" data-entity-uuid="eefd29d6-1307-48bb-a0d3-d1082667fae7" src="/images/logo.png"/>
-          </a>
-         
-          <a href="/images/logo.png" target="_blank" title="Explanation of WCAG 2.0 Level Double-A Conformance">
-            <Image width={50}  height={50} alt="Level Double-A conformance,W3C WAI Web Content Accessibility Guidelines 2.0" src="/images/logo.png"/>
-          </a>
-      </div>
-
-      <div className="container mx-auto mt-4 text-xs text-center">
-        <p>This site is best viewed in 1024 * 768 resolution with the latest version of Chrome, Firefox, Safari, and Internet Explorer (Edge).</p>
-      </div>
-    </footer>
+    </>
   );
-};
+}
 
-export default Footer;
+
+
+// <p className="md:border-r border-sdmis-primary-600 border-0"> Total Visitors: 1231157 </p>
+// <p>  Last Updated On : 2023-11-06 10:44:2</p>
+// <p>This site is best viewed in 1024 * 768 resolution with latest version of Chrome, Firefox, Safari and Internet Explorer(Edge).</p>

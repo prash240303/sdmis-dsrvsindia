@@ -1,6 +1,5 @@
 import React from 'react';
-import { Carousel, CarouselStylesType } from "@material-tailwind/react";
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
+import { Carousel } from "@material-tailwind/react";
 import Image from 'next/image';
 
 const imageWidth = 1920;
@@ -13,7 +12,6 @@ const dynamicImageUrls = [
 ];
 
 const CarouselTransition = () => {
-  // Your image data here
 
   return (
     <Carousel
@@ -25,7 +23,9 @@ const CarouselTransition = () => {
           disabled={firstIndex}
           className="absolute top-2/4 left-4 bg-black -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-sdmis-neutral-500 active:bg-black/30 grid place-items-center"
         >
-          <ChevronLeftIcon strokeWidth={3} className="-ml-1 h-7 w-7" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
         </button>
       )}
       nextArrow={({ handleNext, lastIndex }) => (
@@ -34,7 +34,9 @@ const CarouselTransition = () => {
           disabled={lastIndex}
           className="absolute top-2/4 right-4 bg-black -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-sdmis-neutral-500 active:bg-black/30 grid place-items-center"
         >
-          <ChevronRightIcon strokeWidth={3} className="ml-1 h-7 w-7" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
         </button>
       )}
       navigation={({ setActiveIndex, activeIndex, length }) => (
@@ -42,9 +44,8 @@ const CarouselTransition = () => {
           {new Array(length).fill("").map((_, i) => (
             <span
               key={i}
-              className={`block h-3 w-3 cursor-pointer rounded-full transition-colors content-[''] ${
-                activeIndex === i ? "bg-black" : " bg-sdmis-neutral-400"
-              }`}
+              className={`block h-3 w-3 cursor-pointer rounded-full transition-colors content-[''] ${activeIndex === i ? "bg-black" : " bg-sdmis-neutral-400"
+                }`}
               onClick={() => setActiveIndex(i)}
             />
           ))}
@@ -58,7 +59,7 @@ const CarouselTransition = () => {
           height={imageHeight}
           src={imageUrl}
           alt={`image ${index + 1}`}
-          className="h-full w-full object-cover "
+          className="h-full w-full object-cover"
         />
       ))}
     </Carousel>
