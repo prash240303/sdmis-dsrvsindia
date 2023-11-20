@@ -30,20 +30,20 @@ const Navbar = () => {
   }, []);
 
 
-    // Dynamic navigation items
-    const navItems = [
-      { label: "About us", route: "/" },
-      { label: "Service on Portal", route: "/" },
-      { label: "Track Application", route: "/" },
-      { label: "Contact Us", route: "/" },
-      { label: "Donation", route: "/" },
-      { label: "Apply for New Branch / Study Centre", route: "/" },
-      { label: "Direct Online Admission", route: "/" },
-      { label: "Centre Locater", route: "/" },
-      { label: "Slider", route: "/" },
-      { label: "Latest Updates", route: "/" },
-      { label: "New Events", route: "/" },
-    ];
+  // Dynamic navigation items
+  const navItems = [
+    { label: "About us", route: "/" },
+    { label: "Service on Portal", route: "/" },
+    { label: "Track Application", route: "/" },
+    { label: "Contact Us", route: "/" },
+    { label: "Donation", route: "/" },
+    { label: "Apply for New Branch / Study Centre", route: "/" },
+    { label: "Direct Online Admission", route: "/" },
+    { label: "Centre Locater", route: "/" },
+    { label: "Slider", route: "/" },
+    { label: "Latest Updates", route: "/" },
+    { label: "New Events", route: "/" },
+  ];
 
 
   return (
@@ -135,10 +135,7 @@ const Navbar = () => {
 
       {/* Hamburger menu for mobile view */}
       <div className="md:hidden text-center mt-6 w-full bg-sdmis-primary-600 text-white">
-        <button
-          className="text-2xl focus:outline-none"
-          onClick={toggleMenu}
-        >
+        <button className="text-2xl focus:outline-none" onClick={toggleMenu} >
           &#9776; Menu
         </button>
 
@@ -181,9 +178,10 @@ const Navbar = () => {
         )}
       </div>
 
-       <ul className="hidden md:flex  lg:leading-tight text-xs bg-sdmis-primary-600 w-full justify-center items-center text-center text-white">
+      {/* Navigation items for desktop view */}
+      <ul className="hidden md:flex lg:leading-tight text-xs bg-sdmis-primary-600 w-full justify-center items-center text-center text-white">
         {navItems.map((item, index) => (
-          <li key={index} className="hover:bg-sdmis-primary-100 md:text-sm lg:text-xs hover:text-black border-r border-sdmis-primary-400 cursor-pointer px-2 md:py-1 lg:py-4">
+          <li key={index} className="hover:bg-sdmis-primary-100 md:text-sm lg:text-xs hover:text-black border-l border-sdmis-primary-400 cursor-pointer px-2 md:py-1 lg:py-4">
             <Link href={item.route}>{item.label}</Link>
           </li>
         ))}
