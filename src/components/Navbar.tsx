@@ -38,11 +38,12 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "About us", route: "/" },
+    { label: "Home", route: "/" },
+    { label: "About us", route: "/about-us" },
+    { label: "Contact Us", route: "/contact-us" },
     { label: "Service on Portal", route: "/" },
     { label: "Track Application", route: "/" },
-    { label: "Contact Us", route: "/" },
-    { label: "Donation", route: "/" },
+    { label: "Donation", route: "/donation" },
     { label: "Apply for New Branch / Study Centre", route: "/" },
     { label: "Direct Online Admission", route: "/" },
     { label: "Centre Locater", route: "/" },

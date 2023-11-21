@@ -1,10 +1,8 @@
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
-import CarouselTransition  from '@/components/home/Carousel'
+import CarouselTransition from '@/components/home/Carousel'
 import MarqueeNews from '@/components/home/MarqueeNews'
 import AllCourses from '@/components/home/AllCourses'
-import Footer from '@/components/Footer'
+import HomeLayout from '@/components/HomeLayout'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -12,11 +10,11 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center w-full  ${inter.className}`}
     >
-     <Navbar/>
-     <CarouselTransition/>
-     <MarqueeNews/>
-     <AllCourses/>
-     <Footer/>
+      <HomeLayout>
+        <CarouselTransition />
+        <MarqueeNews />
+        <AllCourses />
+      </HomeLayout>
     </main>
   )
 }
