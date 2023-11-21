@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 
 const AdminLogin = () => {
@@ -5,7 +6,7 @@ const AdminLogin = () => {
     <div>
       <Navbar />
       <h1 className="text-4xl mt-10 font-bold text-center">Admin Login</h1>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6  lg:px-8">
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 mb-16 lg:px-8">
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
             <div>
@@ -43,7 +44,7 @@ const AdminLogin = () => {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-sdmis-primary-600 hover:bg-sdmis-primary-300 hover:text-black px-3 py-1.5 text-sm font-semibold  text-white shadow-sm ">
+                className="flex mt-8 w-full justify-center rounded-md bg-sdmis-primary-600 hover:bg-sdmis-primary-300 hover:text-black px-3 py-1.5 text-sm font-semibold  text-white shadow-sm ">
                 Sign in
               </button>
             </div>
@@ -56,6 +57,7 @@ const AdminLogin = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
