@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <nav className="border-b-8 border-sdmis-primary-300 bg-sdmis-primary-100 w-full  flex flex-col items-center">
       <div className=" bg-sdmis-primary-600 w-full flex items-center justify-between px-4">
-        <div className="flex items-start justify-center">
+        {/* <div className="flex items-start justify-center">
           <Image
             src="/next.svg"
             alt="logo"
@@ -70,12 +70,12 @@ const Navbar = () => {
             height={77}
             className="w-12 h-6 "
           />
-        </div>
+        </div> */}
         <Link href="/" className="text-white text-sm underline">
           skip to main content
         </Link>
-        <div>
-          <p className="text-white text-xs">{currentDateTime}</p>
+        <div className="bg-sdmis-primary-300  my-1 rounded-md ">
+          <p className="  leading-loose px-2  text-xs">{currentDateTime}</p>
         </div>
       </div>
 
@@ -184,39 +184,16 @@ const Navbar = () => {
 
         {showMenu && (
           <ul className="text-base bg-sdmis-primary-600 mt-2">
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer  py-2">
-              <Link href="/">About us</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-              <Link href="/">Service on Portal</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-              <Link href="/">Track Application</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2 ">
-              <Link href="/">Contact</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2 ">
-              <Link href="/">Donation</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300  cursor-pointer py-2">
-              <Link href="/">Apply for New Branch / Study Centre</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-              <Link href="/">Direct Online Admission</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-              <Link href="/">Centre Locater</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-              <Link href="/">Slider</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-              <Link href="/">Latest Updates</Link>
-            </li>
-            <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-              <Link href="/">New Events</Link>
-            </li>
+            {
+              navItems.map((item, index) => (
+                <li
+                  key={index}
+                  className="hover:bg-sdmis-primary-300 hover:text-black cursor-pointer  py-2"
+                >
+                  <Link href={item.route}>{item.label}</Link>
+                </li>
+              ))
+            }
           </ul>
         )}
       </div>

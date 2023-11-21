@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <>
       {/* Footer */}
-      <div className="w-full border bg-sdmis-primary-300 border-black ">
+      <div className="w-full  bg-sdmis-primary-300 ">
         <div className="flex justify-center items-center flex-wrap gap-3 px-2 py-3 border-b border-sdmis-primary-600">
           {/* dynamic list of items */}
           |
