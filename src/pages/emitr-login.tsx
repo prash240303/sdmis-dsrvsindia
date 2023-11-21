@@ -1,11 +1,11 @@
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const AdminLogin = () => {
+const EmitrLogin = () => {
   return (
     <>
       <Navbar />
-      <h1 className="text-4xl mt-10 font-bold text-center">Admin Login</h1>
+      <h1 className="text-4xl mt-10 font-bold text-center">Emitr Login</h1>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 mb-16 lg:px-8">
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
@@ -61,5 +61,4 @@ const AdminLogin = () => {
     </>
   )
 }
-
-export default AdminLogin
+export default EmitrLogin;

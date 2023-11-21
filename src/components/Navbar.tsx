@@ -12,7 +12,7 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-  // Function to update date and time
+
   const updateDateTime = () => {
     const now = new Date();
     const options = {
@@ -29,7 +29,6 @@ const Navbar = () => {
     setCurrentDateTime(formattedDateTime);
   };
 
-  // Update date and time on component mount
   useEffect(() => {
     updateDateTime();
     // Update every second
@@ -38,7 +37,6 @@ const Navbar = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  // Dynamic navigation items
   const navItems = [
     { label: "About us", route: "/" },
     { label: "Service on Portal", route: "/" },
