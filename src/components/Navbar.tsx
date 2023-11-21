@@ -15,7 +15,16 @@ const Navbar = () => {
   // Function to update date and time
   const updateDateTime = () => {
     const now = new Date();
-    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" };
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      timeZoneName: "short",
+    };
     const formattedDateTime = now.toLocaleString("en-US");
     setCurrentDateTime(formattedDateTime);
   };
@@ -28,7 +37,6 @@ const Navbar = () => {
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
-
 
   // Dynamic navigation items
   const navItems = [
@@ -45,15 +53,24 @@ const Navbar = () => {
     { label: "New Events", route: "/" },
   ];
 
-
   return (
     <nav className="border-b-8 border-sdmis-primary-300 bg-sdmis-primary-100 w-full  flex flex-col items-center">
-
       <div className=" bg-sdmis-primary-600 w-full flex items-center justify-between px-4">
         <div className="flex items-start justify-center">
-          <Image src="/next.svg" alt="logo" width={128} height={77} className="w-12 h-6 " />
-          <Image src="/next.svg" alt="logo" width={128} height={77} className="w-12 h-6 " />
-
+          <Image
+            src="/next.svg"
+            alt="logo"
+            width={128}
+            height={77}
+            className="w-12 h-6 "
+          />
+          <Image
+            src="/next.svg"
+            alt="logo"
+            width={128}
+            height={77}
+            className="w-12 h-6 "
+          />
         </div>
         <Link href="/" className="text-white text-sm underline">
           skip to main content
@@ -63,29 +80,53 @@ const Navbar = () => {
         </div>
       </div>
 
-
       {/* Images displayed  in mobile view */}
       <div className="md:hidden flex   text-center">
-        <Image src="/images/logo.png" alt="logo" width={128} height={77} className="w-20 h-20 mx-auto mb-4" />
-        <Image src="/images/logoside.jpg" alt="logo" width={150} height={100} className="mx-auto w-28 h-20" />
+        <Image
+          src="/images/logo.png"
+          alt="logo"
+          width={128}
+          height={77}
+          className="w-20 h-20 mx-auto mb-4"
+        />
+        <Image
+          src="/images/logoside.jpg"
+          alt="logo"
+          width={150}
+          height={100}
+          className="mx-auto w-28 h-20"
+        />
       </div>
-
 
       <div className="flex bg-sdmis-primary-100 bg-[url('/images/texture.jpg')]  items-center justify-center w-full">
         {/* Images hidden in laptop view */}
         <div className="hidden sm:block">
-          <Image src="/images/logo.png" alt="logo" width={128} height={77} className="w-48 h-32" />
+          <Image
+            src="/images/logo.png"
+            alt="logo"
+            width={128}
+            height={77}
+            className="w-48 h-32"
+          />
         </div>
         <div className="flex flex-col gap-1 my-2  w-full font-bold md:text-2xl lg:text-xl  text-base px-3 md:text-left text-center">
           <h1>डिजिटल शिक्षा तथा रोज़गार विकास संस्थान</h1>
-          <h1>Institute of Digital Education & Employment Development, INDIA</h1>
-          <h1 className="font-semibold md:text-xl text-sm w-full">AN ISO 9001:2015 CERTIFIED INSTITUTE</h1>
+          <h1>
+            Institute of Digital Education & Employment Development, INDIA
+          </h1>
+          <h1 className="font-semibold md:text-xl text-sm w-full">
+            AN ISO 9001:2015 CERTIFIED INSTITUTE
+          </h1>
         </div>
         {/* Images hidden in laptop view */}
         <div className="hidden sm:block mr-2">
-          <Image src="/images/logoside.jpg" alt="logo" width={150} height={100} />
+          <Image
+            src="/images/logoside.jpg"
+            alt="logo"
+            width={150}
+            height={100}
+          />
         </div>
-
 
         {/* Custom dropdown for Login/Sign Up (hidden for mobile view) */}
         <div className="hidden md:block relative text-white w-64">
@@ -96,14 +137,14 @@ const Navbar = () => {
             Login / Sign Up
           </button>
           {showDropdown && (
-            <ul className="absolute left-0 bg-sdmis-primary-100 text-black ">
-              <li className="hover:bg-sdmis-primary-600 cursor-pointer px-8 py-2">
-                <Link href="/">Admin</Link>
+            <ul className="absolute left-0 bg-sdmis-primary-100 text-black z-10 shadow-lg ">
+              <li className="hover:bg-sdmis-primary-600  hover:text-white cursor-pointer px-8 py-2">
+                <Link href="/login-admin">Admin</Link>
               </li>
-              <li className="hover:bg-sdmis-primary-600 cursor-pointer text-center py-2">
-                <Link href="/">Student</Link>
+              <li className="hover:bg-sdmis-primary-600  hover:text-white cursor-pointer text-center py-2">
+                <Link href="/signin-student">Student</Link>
               </li>
-              <li className="hover:bg-sdmis-primary-600 cursor-pointer text-center py-2">
+              <li className="hover:bg-sdmis-primary-600 hover:text-white cursor-pointer text-center py-2">
                 <Link href="/">E-Mitra</Link>
               </li>
             </ul>
@@ -121,12 +162,15 @@ const Navbar = () => {
             Login / Sign Up
           </button>
           {showDropdown && (
-            <ul className="absolute -left-3 mt-2 bg-sdmis-primary-300">
-              <li className="hover:bg-sdmis-primary-300 cursor-pointer px-12 items-center py-2">
-                <Link href="/">Login</Link>
+            <ul className="absolute left-0 bg-sdmis-primary-100 text-black z-10 shadow-lg ">
+              <li className="hover:bg-sdmis-primary-600  hover:text-white cursor-pointer px-8 py-2">
+                <Link href="/login-admin">Admin</Link>
               </li>
-              <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-                <Link href="/">Sign Up</Link>
+              <li className="hover:bg-sdmis-primary-600  hover:text-white cursor-pointer text-center py-2">
+                <Link href="/login-student">Student</Link>
+              </li>
+              <li className="hover:bg-sdmis-primary-600 hover:text-white cursor-pointer text-center py-2">
+                <Link href="/">E-Mitra</Link>
               </li>
             </ul>
           )}
@@ -135,7 +179,7 @@ const Navbar = () => {
 
       {/* Hamburger menu for mobile view */}
       <div className="md:hidden text-center mt-6 w-full bg-sdmis-primary-600 text-white">
-        <button className="text-2xl focus:outline-none" onClick={toggleMenu} >
+        <button className="text-2xl focus:outline-none" onClick={toggleMenu}>
           &#9776; Menu
         </button>
 
@@ -160,7 +204,7 @@ const Navbar = () => {
               <Link href="/">Apply for New Branch / Study Centre</Link>
             </li>
             <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
-              <Link href="/" >Direct Online Admission</Link>
+              <Link href="/">Direct Online Admission</Link>
             </li>
             <li className="hover:bg-sdmis-primary-300 cursor-pointer py-2">
               <Link href="/">Centre Locater</Link>
@@ -181,7 +225,10 @@ const Navbar = () => {
       {/* Navigation items for desktop view */}
       <ul className="hidden md:flex lg:leading-tight text-xs bg-sdmis-primary-600 w-full justify-center items-center text-center text-white">
         {navItems.map((item, index) => (
-          <li key={index} className="hover:bg-sdmis-primary-100 md:text-sm lg:text-xs hover:text-black border-l border-sdmis-primary-400 cursor-pointer px-2 md:py-1 lg:py-4">
+          <li
+            key={index}
+            className="hover:bg-sdmis-primary-100 md:text-sm lg:text-xs hover:text-black border-l border-sdmis-primary-400 cursor-pointer px-2 md:py-1 lg:py-4"
+          >
             <Link href={item.route}>{item.label}</Link>
           </li>
         ))}

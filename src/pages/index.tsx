@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
-import CarouselTransition  from '@/components/Carousel'
-import MarqueeNews from '@/components/MarqueeNews'
-import AllCourses from '@/components/AllCourses'
+import CarouselTransition  from '@/components/home/Carousel'
+import MarqueeNews from '@/components/home/MarqueeNews'
+import AllCourses from '@/components/home/AllCourses'
 import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
