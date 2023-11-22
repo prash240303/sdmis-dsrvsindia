@@ -8,7 +8,7 @@ const AdminLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
+  const handleLogin = (e:any) => {
     e.preventDefault();
 
     // Basic validation
