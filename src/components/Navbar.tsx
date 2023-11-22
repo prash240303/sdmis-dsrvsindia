@@ -53,7 +53,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="border-b-8 border-sdmis-primary-300 bg-sdmis-primary-100 w-full  flex flex-col items-center">
+    <nav className="border-b-8 border-sdmis-primary-100 bg-sdmis-primary-100 w-full  flex flex-col items-center">
       <div className=" bg-sdmis-primary-600 w-full flex items-center justify-between px-4">
         {/* <div className="flex items-start justify-center">
           <Image
@@ -74,13 +74,12 @@ const Navbar = () => {
         <Link href="/" className="text-white text-sm underline">
           skip to main content
         </Link>
-        <div className="bg-sdmis-primary-300  my-1 rounded-md ">
-          <p className="  leading-loose px-2  text-xs">{currentDateTime}</p>
+        <div className="bg-sdmis-primary-100 my-1 rounded-md ">
+          <p className="leading-loose px-2 text-xs">{currentDateTime}</p>
         </div>
       </div>
 
-      {/* Images displayed  in mobile view */}
-      <div className="md:hidden flex   text-center">
+      <div className="md:hidden flex text-center">
         <Image
           src="/images/logo.png"
           alt="logo"
@@ -138,13 +137,13 @@ const Navbar = () => {
           {showDropdown && (
             <ul className="absolute left-0 bg-sdmis-primary-100 text-black z-10 shadow-lg ">
               <li className="hover:bg-sdmis-primary-600  hover:text-white cursor-pointer px-8 py-2">
-                <Link href="/login-admin">Admin</Link>
+                <Link target="_blank" href="/login-admin">Admin</Link>
               </li>
               <li className="hover:bg-sdmis-primary-600  hover:text-white cursor-pointer text-center py-2">
-                <Link href="/signin-student">Student</Link>
+                <Link target="_blank" href="/signin-student">Student</Link>
               </li>
               <li className="hover:bg-sdmis-primary-600 hover:text-white cursor-pointer text-center py-2">
-                <Link href="/">E-Mitra</Link>
+                <Link target="_blank" href="/">E-Mitra</Link>
               </li>
             </ul>
           )}
@@ -161,12 +160,12 @@ const Navbar = () => {
             Login / Sign Up
           </button>
           {showDropdown && (
-            <ul className="absolute left-0 bg-sdmis-primary-100 text-black z-10 shadow-lg ">
+            <ul className="absolute left-0 top-9 bg-sdmis-primary-100 text-black z-10 shadow-lg ">
               <li className="hover:bg-sdmis-primary-600  hover:text-white cursor-pointer px-8 py-2">
                 <Link href="/login-admin">Admin</Link>
               </li>
               <li className="hover:bg-sdmis-primary-600  hover:text-white cursor-pointer text-center py-2">
-                <Link href="/login-student">Student</Link>
+                <Link href="/signin-student">Student</Link>
               </li>
               <li className="hover:bg-sdmis-primary-600 hover:text-white cursor-pointer text-center py-2">
                 <Link href="/">E-Mitra</Link>
@@ -177,26 +176,24 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger menu for mobile view */}
-      <div className="md:hidden text-center mt-6 w-full bg-sdmis-primary-600 text-white">
-        <button className="text-2xl focus:outline-none" onClick={toggleMenu}>
+      <button className="md:hidden text-center mt-6 w-full bg-sdmis-primary-600 text-white" onClick={toggleMenu}>
+        <span className="text-2xl py-2" >
           &#9776; Menu
-        </button>
+        </span>
 
         {showMenu && (
-          <ul className="text-base bg-sdmis-primary-600 mt-2">
-            {
-              navItems.map((item, index) => (
-                <li
-                  key={index}
-                  className="hover:bg-sdmis-primary-300 hover:text-black cursor-pointer  py-2"
-                >
-                  <Link href={item.route}>{item.label}</Link>
-                </li>
-              ))
-            }
+          <ul className="text-base bg-sdmis-primary-600 mt-2 px-2">
+            {navItems.map((item, index) => (
+              <li
+                key={index}
+                className="hover:bg-sdmis-primary-300 border-b border-sdmis-primary-100 border-opacity-20 hover:text-black cursor-pointer  py-2"
+              >
+                <Link href={item.route}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
         )}
-      </div>
+      </button>
 
       {/* Navigation items for desktop view */}
       <ul className="hidden md:flex lg:leading-tight text-xs bg-sdmis-primary-600 w-full justify-center items-center text-center text-white">

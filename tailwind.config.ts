@@ -13,8 +13,8 @@ module.exports = withMT({
         'white-15': 'rgba(255, 255, 255, 0.15)',
         sdmis: {
           primary: {
-            100: '#F8EDDB',
-            300: '#F8EDDB',
+            100: '#f8eddb',
+            300: '#e2b468',
             600: '#AD4800',
           },
           neutral: {
