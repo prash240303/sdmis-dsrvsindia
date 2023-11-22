@@ -1,6 +1,33 @@
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-import Image from "next/image"
 const AdminLogin = () => {
+  const router = useRouter();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Basic validation
+    if (!email || !password) {
+      alert('Please enter both email and password.');
+      return;
+    }
+
+    // Replace this with your actual login logic
+    // For now, let's consider a dummy authentication
+    if (email === 'admin@example.com' && password === 'adminpassword') {
+      // Successful login, redirect to admin dashboard
+      router.push('/admin-dashboard');
+    } else {
+      // Invalid credentials
+      alert('Invalid email or password. Please try again.');
+    }
+  };
+
   return (
     <>
       <main className="bg-[url('/images/backdrop.png')] bg-cover bg-center bg-no-repeat text-black  flex flex-col items-center justify-start min-h-screen">
@@ -25,59 +52,62 @@ const AdminLogin = () => {
 
         <h1 className="text-4xl font-bold text-center my-6">Admin Login</h1>
 
-
-        <div className="max-w-md bg-white shadow-lg  px-10 pb-8 pt-6 rounded-lg  text-black mx-auto">
-            <form className="space-y-6" action="#" method="POST">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium leading-6">
-                  Email address
-                </label>
-                <div className="mt-2">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    className="block w-full rounded-md px-2  py-1.5 text-gray-900 border border-sdmis-neutral-300  sm:text-sm "
-                  />
-                </div>
+        <div className="max-w-md bg-white shadow-lg px-10 pb-8 pt-6 rounded-lg text-black mx-auto">
+          <form className="space-y-6">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium leading-6">
+                Email address
+              </label>
+              <div className="mt-2">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="block w-full rounded-md px-2 py-1.5 text-gray-900 border border-sdmis-neutral-300 sm:text-sm"
+                />
               </div>
-              <div>
-                <div className="flex items-center justify-between">
-                  <label htmlFor="password" className="block text-sm font-medium leading-6">
-                    Password
-                  </label>
-                </div>
-                <div className="mt-2">
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    required
-                    className="block w-full rounded-md  px-2  py-1.5 text-gray-900 border border-sdmis-neutral-300  sm:text-sm sm:leading-6"
-                  />
-                </div>
+            </div>
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium leading-6">
+                Password
+              </label>
+              <div className="mt-2">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="block w-full rounded-md px-2 py-1.5 text-gray-900 border border-sdmis-neutral-300 sm:text-sm sm:leading-6"
+                />
               </div>
-              <div>
-                <button
-                  type="submit"
-                className="flex mt-8 w-full justify-center rounded-md bg-yellow-900 hover:bg-sdmis-primary-100 hover:text-black px-3 py-1.5 text-sm font-semibold  text-white shadow-sm ">
+            </div>
+            <div>
+              <button
+                type="submit"
+                onClick={handleLogin}
+                className="flex mt-8 w-full justify-center rounded-md bg-yellow-900 hover:bg-sdmis-primary-100 hover:text-black px-3 py-1.5 text-sm font-semibold text-white shadow-sm"
+              >
                 Sign in Admin
               </button>
             </div>
           </form>
 
-            <p className="mt-5 text-center text-sm">
-              <a href="#" className="font-semibold hover:text-sdmis-neutral-500">
-                Forgot Password?
-              </a>
-            </p>
-          </div>
+          <p className="mt-5 text-center text-sm">
+            <a href="#" className="font-semibold hover:text-sdmis-neutral-500">
+              Forgot Password?
+            </a>
+          </p>
+        </div>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default AdminLogin
+export default AdminLogin;
