@@ -8,7 +8,7 @@ const AdminLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = (e:any) => {
+  const handleLogin = (e: any) => {
     e.preventDefault();
 
     // Basic validation
@@ -30,8 +30,16 @@ const AdminLogin = () => {
 
   return (
     <>
-      <main className=" text-black  flex flex-col items-center justify-start min-h-screen">
-        <Image src="/images/backdrop.webp" priority={true} alt="bg" width={2000} height={2000} className='object-cover h-full absolute left-0 -z-10' />
+      <main className="text-black flex flex-col items-center justify-start min-h-screen">
+        <Image
+          src="/images/backdrop.webp"
+          priority={true}
+          alt="bg"
+          fill
+          layout="responsive"
+          sizes="(max-width: 786px) 100vw, 700px"
+          className='object-cover  absolute left-0 -z-10'
+        />
         <div className="flex md:flex-row flex-col items-center">
           <Image
             src="/images/logo.png"
@@ -40,11 +48,9 @@ const AdminLogin = () => {
             height={77}
             className="w-32 h-32"
           />
-          <div className="flex flex-col gap-1 w-full font-bold md:text-2xl lg:text-xl  text-base px-3 text-center  md:text-left">
+          <div className="flex flex-col gap-1 w-full font-bold md:text-2xl lg:text-xl text-base px-3 text-center md:text-left">
             <h1>डिजिटल शिक्षा तथा रोज़गार विकास संस्थान</h1>
-            <h1>
-              Institute of Digital Education & Employment Development, INDIA
-            </h1>
+            <h1>Institute of Digital Education & Employment Development, INDIA</h1>
             <h1 className="font-semibold md:text-xl text-sm w-full">
               AN ISO 9001:2015 CERTIFIED INSTITUTE
             </h1>
