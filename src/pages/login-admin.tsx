@@ -38,7 +38,7 @@ const AdminLogin = () => {
             alt="logo"
             width={128}
             height={77}
-            className="w-32 h-32"
+            // className="w-32 h-32"
           />
           <div className="flex flex-col gap-1 w-full font-bold md:text-2xl lg:text-xl text-base px-3 text-center md:text-left">
             <h1>डिजिटल शिक्षा तथा रोज़गार विकास संस्थान</h1>
