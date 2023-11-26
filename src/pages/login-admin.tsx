@@ -31,7 +31,7 @@ const AdminLogin = () => {
   return (
     <>
       <main className=" text-black  flex flex-col items-center justify-start min-h-screen">
-        <Image src="/images/backdrop.webp" priority={true} alt="bg" width={2000} height={2000} className=' object-cover w-full h-full absolute left-0 -z-10' />
+        <Image src="/images/backdrop.webp" priority={true} alt="bg" width={2000} height={2000} className='object-cover w-full h-screen absolute left-0 -z-10' />
         <div className="flex md:flex-row mt-4 flex-col items-center">
           <Image
             src="/images/logo.png"
