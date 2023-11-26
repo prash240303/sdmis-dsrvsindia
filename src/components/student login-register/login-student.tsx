@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 const StudentLogin = () => {
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 lg:px-8">
+      <div className="flex min-h-full flex-1 flex-col justify-center py-2 px-6 lg:px-8">
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
             <div>
@@ -47,7 +47,7 @@ const StudentLogin = () => {
             </div>
           </form>
 
-          <p className="mt-5 text-center text-sm">
+          <p className="my-5 text-center text-sm">
             <a href="#" className="font-semibold hover:text-sdmis-neutral-500">
               Forgot Password?
             </a>
