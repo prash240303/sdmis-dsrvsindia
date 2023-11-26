@@ -263,7 +263,7 @@ const Navbar = () => {
     { label: "Apply for New Branch / Study Centre", route: "/home/apply" },
     { label: "Direct Online Admission", route: "/home/online-admission" },
     { label: "Centre Locater", route: "/home/center-locator" },
-    { label: "Slider", route: "/" },
+    { label: "Slider", route: "/home/slider" },
     { label: "Latest Updates", route: "/home/latest-updates" },
     { label: "New Events", route: "/home/new-events" },
   ];
