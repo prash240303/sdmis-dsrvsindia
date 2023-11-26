@@ -28,9 +28,10 @@ const AllCourses = () => {
 
   return (
     <div className="flex overflow-x-auto space-x-4 p-4">
-      {courses.map((course, index) => (
+      {/* {courses.map((course, index) => (
         <CourseCard key={index} {...course} />
-      ))}
+      ))} */}
+      hi
     </div>
   );
 };
