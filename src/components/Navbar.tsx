@@ -217,6 +217,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -295,7 +298,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="border-b-8 border-sdmis-primary-100 bg-sdmis-primary-100 w-full  flex flex-col items-center">
+    <nav className={`border-b-8 border-sdmis-primary-100 bg-sdmis-primary-100 w-full  flex flex-col  items-center   ${inter.className}`}>
       <div className=" bg-sdmis-primary-600 w-full flex items-center justify-between px-4">
         <Link href="/" className="text-white text-sm underline">
           skip to main content
