@@ -38,13 +38,28 @@ export default function Footer() {
             For any query regarding this website Please Contact the
             WIM:board.pseb@punjab.gov.in (Feedback through Email)
           </p>
-          <div className="flex gap-6 mt-2">
+          {/* <div className="flex gap-6 mt-2">
             <FaInstagram className="w-8 h-8" />
             <FaTwitter className="w-8 h-8" />
             <FaFacebook className="w-8 h-8" />
             <FaYoutube className="w-8 h-8" />
+          </div> */}
+
+          {/* Signup For Newsletter Section Of Footer */}
+          <div className="bg-jse-neutral-900 w-full flex flex-col md:flex-row">
+            <div className="flex flex-col  basis-3/5 gap-4 md:p-10 py-8 px-4">
+              <div className="md:text-2xl text-xl  text-wrap">
+                Sign Up for our newsletter
+              </div>
+              
+            </div>
+            <div className="flex basis-2/5 flex-row text-white md:p-10 px-8  pb-4  items-center justify-around">
+              <input className="rounded-xl h-7/12 w-7/12 p-3 text-black" type="text" placeholder="Enter your email" />
+              <button className="bg-sdmis-primary-600 md:p-4 p-3 h-7/12 w-4/12 rounded-xl">Notify Me</button>
+            </div>
           </div>
         </div>
+
         <div className="flex bg-sdmis-primary-600 md:text-sm text-xs  flex-col text-white  items-center justify-center text-center  gap-4  mt-4 ">
           <div className="flex md:flex-row flex-col md:gap-4 gap-2 mt-4">
             <p>  Total Visitors: 1231157</p>
