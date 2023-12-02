@@ -39,7 +39,7 @@ const AllCourses = () => {
   ];
 
   return (
-    <div className=" flex space-x-0 overflow-x-auto my-4 py-2 w-full ">
+  <div className=" flex space-x-0 overflow-x-auto mb-4 py-2 w-full ">
       {courses.map((course, index) => (
         <div key={index} className="flex-shrink-0 w-3/5 md:w-1/3 lg:w-1/4 xl:w-1/6 max-2xl:w-1/12 px-2">
         <CourseCard {...course} />

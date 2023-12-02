@@ -16,7 +16,7 @@ const MarqueeNews = () => {
   const duplicatedNewsItems = [...newsItems, ...newsItems];
 
   return (
-    <div className="overflow-x-hidden  bg-sdmis-primary-100 py-2 w-full">
+    <div className="overflow-x-hidden my-4 bg-sdmis-primary-100 py-2 w-full">
       <div className="animate-marquee whitespace-nowrap ">
         {newsItems.map((news, index) => (
           <span className="mx-2 text-base" key={index}> &#x2022; {news}  </span>
