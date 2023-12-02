@@ -2,7 +2,7 @@ import { Carousel } from "@material-tailwind/react";
 import Image from "next/image";
 
 const CourseCard = ({ title, description, categories }: any) => (
-  <div className="max-w-xs rounded border border-red-600 overflow-hidden shadow-lg mx-2">
+  <div className="max-w-xs rounded overflow-hidden shadow-lg mx-2">
     <Image width={300} height={300} className="w-full" src="/images/course.jpg" alt="Course Image" />
     <div className="px-3 py-4">
       <h1 className="font-bold text-base mb-2 line-clamp-2">
@@ -41,7 +41,7 @@ const AllCourses = () => {
   return (
     <div className=" flex space-x-0 overflow-x-auto my-4 py-2 w-full ">
       {courses.map((course, index) => (
-        <div key={index} className="flex-shrink-0 border border-green-500 w-3/5 md:w-1/3 lg:w-1/4 xl:w-1/12 px-2">
+        <div key={index} className="flex-shrink-0 w-3/5 md:w-1/3 lg:w-1/4 xl:w-1/12 px-2">
         <CourseCard {...course} />
         </div>
       ))}
