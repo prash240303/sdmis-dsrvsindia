@@ -55,8 +55,9 @@ const StudentSignIn = () => {
           </div>
         </div>
 
-        <div className='md:my-16 my-8 rounded-lg bg-white w-fit mx-auto self-center flex items-center justify-center '>
+        <div className='mt-4 w-full flex items-center justify-center'>
           {isRegistering ? <StudentRegister /> : <StudentLogin />}
+
         </div>
       </main>
     </>

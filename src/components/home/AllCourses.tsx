@@ -1,16 +1,19 @@
 import { Carousel } from "@material-tailwind/react";
 import Image from "next/image";
-
 const CourseCard = ({ title, description, categories }: any) => (
   <div className="max-w-xs rounded overflow-hidden shadow-lg mx-2">
-    <Image width={300} height={300} className="w-full" src="/images/course.jpg" alt="Course Image" />
+    <div className="relative w-full h-48">
+      <Image
+        src="/images/course.jpg"
+        alt="Course Image"
+        layout="fill"
+        objectFit="cover"
+        className="rounded-t"
+      />
+    </div>
     <div className="px-3 py-4">
-      <h1 className="font-bold text-base mb-2 line-clamp-2">
-        {title}
-      </h1>
-      <p className="text-gray-700 text-base line-clamp-2 md:line-clamp-3">
-        {description}
-      </p>
+      <h1 className="font-bold text-base mb-2 line-clamp-2">{title}</h1>
+      <p className="text-gray-700 text-base line-clamp-2 md:line-clamp-3">{description}</p>
     </div>
     <div className="px-3 pt-2 pb-2">
       {categories.map((category: string, index: number) => (

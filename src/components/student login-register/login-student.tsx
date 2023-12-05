@@ -1,57 +1,53 @@
-import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 const StudentLogin = () => {
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center py-2 px-6 lg:px-8">
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                Email address
+      <div className="w-full bg-white  rounded-lg md:w-1/3 xl:w-1/3">
+        <div className="w-full px-7 py-5 sm:p-15 xl:p-18">
+          <form>
+            <div className="mb-4">
+              <label className="mb-2.5 block font-medium text-black dark:text-white">
+                Email
               </label>
-              <div className="mt-2">
+              <div className="relative">
                 <input
-                  id="email"
-                  name="email"
                   type="email"
-                  autoComplete="email"
-                  required
-                  className="block w-full rounded-md px-2  py-1.5 text-gray-900 border border-sdmis-neutral-300  sm:text-sm "
+                  placeholder="Enter your email"
+                  className="md:w-11/12 w-full xl:w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                 />
+
               </div>
             </div>
-            <div>
-              <div className="flex items-center justify-between">
-                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                  Password
-                </label>
-              </div>
-              <div className="mt-2">
+
+            <div className="mb-6">
+              <label className="mb-2.5 block font-medium text-black dark:text-white">
+                Password
+              </label>
+              <div className="relative">
                 <input
-                  id="password"
-                  name="password"
                   type="password"
-                  autoComplete="current-password"
-                  required
-                  className="block w-full rounded-md  px-2  py-1.5 text-gray-900 border border-sdmis-neutral-300  sm:text-sm sm:leading-6"
+                  placeholder="password"
+                  className="md:w-11/12 w-full xl:w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-4 outline-none focus:border-primary focus-visible:shadow-none"
                 />
+
               </div>
             </div>
-            <div>
-              <button
+
+            <div className="mb-5">
+              <input
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-sdmis-primary-600 hover:bg-sdmis-primary-300 hover:text-black px-3 py-1.5 text-sm font-semibold  text-white shadow-sm ">
-                Sign in
-              </button>
+                value="Sign In"
+                className="w-full cursor-pointer rounded-lg border border-primary bg-sdmis-primary-600 p-4 text-white transition hover:bg-opacity-90"
+              />
+            </div>
+
+            <div className=" text-center">
+              <Link href="/">
+                Forgot passowrd?
+              </Link>
             </div>
           </form>
-
-          <p className="my-5 text-center text-sm">
-            <a href="#" className="font-semibold hover:text-sdmis-neutral-500">
-              Forgot Password?
-            </a>
-          </p>
         </div>
       </div>
     </>
