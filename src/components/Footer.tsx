@@ -1,4 +1,6 @@
-import Image from "next/image";
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
+
 import { FaInstagram, FaFacebook, FaYoutube, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   const footerItems = [
@@ -15,9 +17,8 @@ export default function Footer() {
   return (
     <>
       {/* Footer */}
-      <div className="w-full border-t border-sdmis-primary-600 bg-sdmis-primary-100 ">
+      <div className={`w-full border-t border-sdmis-primary-600 bg-sdmis-primary-100 ${inter.className}`}>
         <div className="flex justify-center items-center flex-wrap gap-3 px-2 py-3 border-b border-sdmis-primary-600">
-          {/* dynamic list of items */}
           |
           {footerItems.map((item, index) => (
             <a
@@ -43,12 +44,12 @@ export default function Footer() {
         {/* Signup For Newsletter Section Of Footer */}
         <div className="w-full flex my-4 py-4 items-center justify-center md:gap-24 gap-0 flex-col md:flex-row">
           <div className="flex flex-col md:pb-0 pb-4  px-4">
-            <div className="md:text-2xl text-xl  text-wrap">
-              Sign Up for our newsletter
+            <div className="md:text-2xl text-xl font-bold text-wrap">
+              Sign Up for our Newsletter
             </div>
           </div>
-          <div className="flex md:flex-row flex-col md:gap-0 gap-4 text-white items-center justify-around">
-            <input className="rounded-xl h-7/12 md:w-72 w-52 mr-4 p-3 text-black" type="text" placeholder="Enter your email" />
+          <div className="flex md:flex-row flex-col md:gap-0 gap-4 text-white  items-center justify-around">
+            <input className="rounded-xl h-7/12 md:w-72 w-52 mr-4 p-3 border border-sdmis-primary-600 text-black" type="text" placeholder="Enter your email" />
             <button className="bg-sdmis-primary-600 py-3 md:px-5 px-3 rounded-xl">Notify Me</button>
           </div>
         </div>
