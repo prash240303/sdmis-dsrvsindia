@@ -16,7 +16,6 @@ const AdminLogin = () => {
       alert('Please enter both email and password.');
       return;
     }
-
     // Replace this with your actual login logic
     // For now, let's consider a dummy authentication
     if (email === 'admin@example.com' && password === 'adminpassword') {
@@ -124,7 +123,13 @@ const AdminLogin = () => {
                 </label>
                 <div className="relative">
                   <input
+                    id="email"
+                    name="email"
                     type="email"
+                    autoComplete="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     className="md:w-11/12 w-full xl:w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                   />
@@ -138,7 +143,13 @@ const AdminLogin = () => {
                 </label>
                 <div className="relative">
                   <input
-                    type="password"
+                     id="password"
+                     name="password"
+                     type="password"
+                     autoComplete="current-password"
+                     required
+                     value={password}
+                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="password"
                     className="md:w-11/12 w-full xl:w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-4 outline-none focus:border-primary focus-visible:shadow-none"
                   />
@@ -149,6 +160,7 @@ const AdminLogin = () => {
               <div className="mb-5">
                 <input
                   type="submit"
+                  onClick={handleLogin}
                   value="Sign In"
                   className="w-full cursor-pointer rounded-lg border border-primary bg-sdmis-primary-600 p-4 text-white transition hover:bg-opacity-90"
                 />
