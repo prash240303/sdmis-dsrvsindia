@@ -59,60 +59,7 @@ const AdminLogin = () => {
         <h1 className="text-4xl font-bold text-center my-6">Admin Login</h1>
 
 
-        {/* old login */}
-        {/* <div className=" bg-white shadow-lg px-10 pb-8 pt-6 rounded-lg text-black mx-auto">
-          <form className="space-y-6">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium leading-6">
-                Email address
-              </label>
-              <div className="mt-2">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full rounded-md px-2 py-1.5 text-gray-900 border border-sdmis-neutral-300 sm:text-sm"
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium leading-6">
-                Password
-              </label>
-              <div className="mt-2">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full rounded-md px-2 py-1.5 text-gray-900 border border-sdmis-neutral-300 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-            <div>
-              <button
-                type="submit"
-                onClick={handleLogin}
-                className="flex mt-8 w-full justify-center rounded-md bg-yellow-900 hover:bg-sdmis-primary-100 hover:text-black px-3 py-1.5 text-sm font-semibold text-white shadow-sm"
-              >
-                Sign in Admin
-              </button>
-            </div>
-          </form>
-
-          <p className="mt-5 text-center text-sm">
-            <a href="#" className="font-semibold hover:text-sdmis-neutral-500">
-              Forgot Password?
-            </a>
-          </p>
-        </div> */}
+        
 
         <div className="w-full bg-white  rounded-lg md:w-1/3 xl:w-1/3">
           <div className="w-full px-7 py-5 sm:p-15 xl:p-18">
