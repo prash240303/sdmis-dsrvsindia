@@ -42,15 +42,16 @@ const StudentSignIn = () => {
 
         <div className="flex justify-center mt-4">
           <div className="flex space-x-4">
+           
             <button
-              className={`px-4 py-2 border border-black bg-sdmis-primary-300 rounded-lg  ${isRegistering ? 'bg-sdmis-primary-600 text-white' : ''}`}
-              onClick={() => setIsRegistering(true)}>
-              Register
-            </button>
-            <button
-              className={`px-4 py-2 border border-black bg-sdmis-primary-300 rounded-lg  ${!isRegistering ? 'bg-sdmis-primary-600 text-white' : ''}`}
+              className={`px-4 py-2   bg-sdmis-primary-100 rounded-lg  ${!isRegistering ? 'bg-sdmis-primary-600 text-white' : ''}`}
               onClick={() => setIsRegistering(false)}>
               Login
+            </button>
+            <button
+              className={`px-4 py-2   bg-sdmis-primary-100 rounded-lg  ${isRegistering ? 'bg-sdmis-primary-600 text-white' : ''}`}
+              onClick={() => setIsRegistering(true)}>
+              Register
             </button>
           </div>
         </div>

@@ -1,8 +1,8 @@
 const StudentRegister = () => {
   return (
     <>
-      <div className="w-full bg-white  rounded-lg md:w-1/3 xl:w-1/3">
-        <div className="w-full px-7 py-5 sm:p-15 xl:p-18">
+      <div className="w-full bg-white xl:mx-0 md:mx-0 mx-5 rounded-lg md:w-1/3 xl:w-1/3">
+        <div className="w-full px-7 pt-5  xl:px-8 xl:pt-5">
           <form>
             <div className="mb-4">
               <label className="mb-2.5 block font-medium text-black dark:text-white">
@@ -50,7 +50,7 @@ const StudentRegister = () => {
               <input
                 type="submit"
                 value="Sign up"
-                className="w-full cursor-pointer rounded-lg border border-primary bg-sdmis-primary-600 p-4 text-white transition hover:bg-opacity-90"
+                className="w-full cursor-pointer rounded-lg  bg-sdmis-primary-600 p-4 text-white transition hover:bg-opacity-90"
               />
             </div>
 
