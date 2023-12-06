@@ -108,7 +108,7 @@ const CenterStudyLogin = () => {
                   type="submit"
                   onClick={handleLogin}
                   value="Sign In"
-                  className="w-full cursor-pointer rounded-lg  bg-sdmis-primary-600 p-4 text-white transition hover:bg-opacity-90"
+                  className="w-full cursor-pointer rounded-lg text-lg bg-sdmis-primary-600 p-4 text-white transition hover:bg-opacity-90"
                 />
               </div>
 
