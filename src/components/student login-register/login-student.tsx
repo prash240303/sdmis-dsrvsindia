@@ -2,11 +2,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-
-
 const StudentLogin = () => {
   const router = useRouter();
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -49,7 +46,6 @@ const StudentLogin = () => {
                     placeholder="Enter your email"
                     className="md:w-11/12 w-full xl:w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                   />
-
               </div>
             </div>
 
@@ -69,7 +65,6 @@ const StudentLogin = () => {
                     placeholder="password"
                     className="md:w-11/12 w-full xl:w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-4 outline-none focus:border-primary focus-visible:shadow-none"
                   />
-
               </div>
             </div>
 
@@ -81,7 +76,6 @@ const StudentLogin = () => {
                 className="w-full cursor-pointer rounded-lg text-lg bg-sdmis-primary-600 p-4 text-white transition hover:bg-opacity-90"
               />
             </div>
-
             <div className=" text-center">
               <Link href="/">
                 Forgot passowrd?
