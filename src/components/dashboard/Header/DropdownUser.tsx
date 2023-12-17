@@ -43,10 +43,10 @@ const DropdownUser = () => {
         href="#"
       >
         <span className="hidden text-right lg:block">
-          <span className="block text-sm font-medium text-black dark:text-white">
-            Thomas Anree
+          <span className="block text-sm ml-3 font-medium text-black dark:text-white">
+            Anish Sachadeva
           </span>
-          <span className="block text-xs">UX Designer</span>
+          <span className="block text-xs">Teacher</span>
         </span>
 
         <span className="h-12 w-12 rounded-full">

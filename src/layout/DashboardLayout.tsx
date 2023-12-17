@@ -5,7 +5,7 @@ import Loader from "@/components/common/Loader";
 import Sidebar from "@/components/dashboard/Sidebar";
 import Header from "@/components/dashboard/Header";
 
-export default function DasboardLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -19,9 +19,7 @@ export default function DasboardLayout({
   }, []);
 
   return (
-    <html lang="en">
-      <body suppressHydrationWarning={true}>
-        <div className="dark:bg-boxdark-2 dark:text-bodydark">
+        <div >
           {loading ? (
             <Loader />
           ) : (
@@ -54,7 +52,5 @@ export default function DasboardLayout({
             </div>
           )}
         </div>
-      </body>
-    </html>
   );
 }

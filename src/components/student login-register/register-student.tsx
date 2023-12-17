@@ -29,10 +29,7 @@ const StudentRegister = () => {
     <>
       <div className="w-full px-12">
         <h1 className="text-gray-800 font-bold text-2xl mb-7">Register Student</h1>
-
         <form >
-         
-
           <div className="mb-4">
             <label className="mb-2.5 block font-medium text-black dark:text-white">
               Email
@@ -70,6 +67,7 @@ const StudentRegister = () => {
               />
             </div>
           </div>
+
           <div className="mb-6">
             <label className="mb-2.5 block font-medium text-black dark:text-white">
               Confirm Password

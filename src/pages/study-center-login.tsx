@@ -20,7 +20,7 @@ const CenterStudyLogin = () => {
     // For now, let's consider a dummy authentication
     if (email === 'admin@example.com' && password === 'adminpassword') {
       // Successful login, redirect to admin dashboard
-      router.push('/admin-dashboard');
+      router.push('/studycenter-dashboard');
     } else {
       // Invalid credentials
       alert('Invalid email or password. Please try again.');
@@ -28,7 +28,7 @@ const CenterStudyLogin = () => {
   };
   return (
     <>
-     <main className="h-screen md:flex">
+      <main className="h-screen md:flex">
         <div className="relative overflow-hidden bg-[url('/images/background.jpg')] md:flex w-1/2 justify-around items-center hidden" >
           <div className="flex md:flex-row mt-4 flex-col items-center">
             <Image
@@ -45,13 +45,14 @@ const CenterStudyLogin = () => {
                 AN ISO 9001:2015 CERTIFIED INSTITUTE
               </h1>
               <button className=" w-28 bg-white text-sdmis-primary-600 hover:bg-sdmis-primary-100 mt-4 py-2  font-bold mb-2"> <Link href="/">Website
-              </Link> </button>
+              </Link>
+              </button>
             </div>
           </div>
           <div className="absolute inset-0 bg-black  opacity-50"></div>
         </div>
- 
-        <div className="flex md:w-1/2 justify-center py-10 items-center bg-white">    
+
+        <div className="flex md:w-1/2 justify-center py-10 items-center bg-white">
           <div className="w-full px-7 py-5 sm:p-15 xl:p-18">
             <form className='px-8'>
               <div className='md:hidden mb-12 flex  items-center flex-col gap-3'>

@@ -69,7 +69,9 @@ module.exports = withMT({
         sdmis: {
           primary: {
             100: '#f8eddb',
+            200: '#eaca94',
             300: '#e2b468',
+            400: '#e66000',
             600: '#AD4800',
           },
           neutral: {

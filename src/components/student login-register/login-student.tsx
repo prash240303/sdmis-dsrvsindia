@@ -19,7 +19,7 @@ const StudentLogin = () => {
     // For now, let's consider a dummy authentication
     if (email === 'admin@example.com' && password === 'adminpassword') {
       // Successful login, redirect to admin dashboard
-      router.push('/admin-dashboard');
+      router.push('/student-dashboard');
     } else {
       // Invalid credentials
       alert('Invalid email or password. Please try again.');
@@ -29,9 +29,7 @@ const StudentLogin = () => {
     <>
       <div className="w-full px-12">
       <h1 className="text-gray-800 font-bold text-2xl mb-7">Sign In Student</h1>
-
         <form>
-        
           <div className="mb-4">
             <label className="mb-2.5 block font-medium text-black dark:text-white">
               Email
